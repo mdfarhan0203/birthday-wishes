@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth Background Gradient */
+body {
+  background: linear-gradient(135deg, #ec4899, #9333ea);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+/* Custom Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Flying Balloons */
+.balloon {
+  font-size: 3rem;
+  position: absolute;
+  bottom: -100px;
+  opacity: 0.8;
+}
+
+/* Quote Styling */
+.quote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-container {
+    height: 200px;
+  }
+  .quote {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
